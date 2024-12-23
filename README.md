@@ -14,7 +14,7 @@ I have located and included the original schematic for reference:
 
 ![original](rgb_led_schematic.png)
 
-A well as the one from the book:
+A well as the one from the book that goes with the above code:
 
 ![station](book_schematic.png)
 
