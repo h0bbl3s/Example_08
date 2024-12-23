@@ -1,4 +1,4 @@
-// Example 08A: wifi networked lamp
+// Example 08A: arduino networked lamp
 // parts of the code are inspired
 // by a blog post by Tod E. Kurt (todbot.com)
 //
@@ -28,7 +28,7 @@ Serial port;
 color c;
 String cs;
 
-String buffer = ""; // Accumulates characters coming from wifi
+String buffer = ""; // Accumulates characters coming from arduino
 
 PFont font;
 
@@ -41,14 +41,14 @@ void setup() {
   textFont(font, 28);
   // IMPORTANT NOTE:
   // The first serial port retrieved by Serial.list()
-  // should be your wifi. If not, uncomment the next
+  // should be your arduino. If not, uncomment the next
   // line by deleting the // before it, and re-run the
   // sketch to see a list of serial ports. Then, change
   // the 0 in between [ and ] to the number of the port
   // that your wifi is connected to.
   //println(Serial.list());
-  String wifiPort = Serial.list()[0];
-  port = new Serial(this, wifiPort, 9600); // connect to wifi
+  String arduinoPort = Serial.list()[0];
+  port = new Serial(this, arduinoPort, 9600); // connect to arduino
 
   lastTime = 0;
   fetchData();
@@ -60,9 +60,9 @@ void draw() {
 
   // Build a colour based on the 3 values
   c = color(exploit, power, wifi);
-  cs = "#" + hex(c,6); // Prepare a string to be sent to wifi
+  cs = "#" + hex(c,6); // Prepare a string to be sent to arduino
 
-  text("wifi Networked Lamp", 10,40);
+  text("Arduino Networked Lamp", 10,40);
   text("Reading feed:", 10, 100);
   text(feed, 10, 140);
 
@@ -91,7 +91,7 @@ void draw() {
     lastTime = millis();
   }
 
-  port.write(cs); // send data to wifi
+  port.write(cs); // send data to arduino
 
   if (port.available() > 0) { // check if there is data waiting
     int inByte = port.read(); // read one byte
@@ -115,7 +115,7 @@ void draw() {
         buffer = "";
 
         // We're likely falling behind in taking readings
-        // from wifi. So let's clear the backlog of
+        // from arduino. So let's clear the backlog of
         // incoming sensor readings so the next reading is
         // up-to-date.
         port.clear(); 
