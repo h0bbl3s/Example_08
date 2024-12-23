@@ -1,10 +1,9 @@
-// Example 08A: arduino networked lamp
+// Example 08A: Arduino networked lamp
 // parts of the code are inspired
 // by a blog post by Tod E. Kurt (todbot.com)
 //
-// This code has been reworked by hobbles (h0bbl3s@yahoo.com)
+// This code has been reworked by h0bbl3s (h0bbl3s@yahoo.com)
 // to work with more recent versions of Processing
-// the feed had to be changed as well, feel free to change it
 //
 // Copy and paste this example into an empty Processing sketch
 
