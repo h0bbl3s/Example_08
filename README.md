@@ -1,8 +1,17 @@
 # Example 08 From "Getting Started with Arduino, Second Edition"
 
 Updated and fixed ***Example 08A*** processing sketch from this book. 
-I did ***NOT*** touch the arduino code as of yet. I may eventually fully 
+I did ***not*** touch the arduino code as of yet. I may eventually fully 
 test both pieces to ensure they work together, or update them otherwise.
+
+## What is this exactly?
+
+This project originally sets up a lamp that will change colors based on information pulled from an xml or RSS feed. 
+
+This book version includes a light sensor and a button to start the process as well as the 3 LEDs for red, green, and blue.
+
+## Further
+Another idea is to set up the code to work with the original schematic as well, using commented out alternative sections of code.
 
 I hope this helps others out there who wanted to fully complete this project like I did.
 
@@ -22,7 +31,7 @@ A well as the one from the book that goes with the above code:
 
 # Usage notes
 
-You will need to create the font file in Processing:
+You will need to create the font file in the  Processing IDE:
 
 - copy the font name from the sketch
 - under the "tools" menu click the font tool
