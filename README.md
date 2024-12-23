@@ -1,4 +1,4 @@
-# Example_08 From "Getting Started with Arduino, Second Edition"
+# Example 08 From "Getting Started with Arduino, Second Edition"
 
 Updated and fixed ***Example 08A*** processing sketch from this book. 
 I did ***NOT*** touch the arduino code as of yet. I may eventually fully 
