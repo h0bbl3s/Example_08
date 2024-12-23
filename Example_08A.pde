@@ -44,7 +44,7 @@ void setup() {
   // line by deleting the // before it, and re-run the
   // sketch to see a list of serial ports. Then, change
   // the 0 in between [ and ] to the number of the port
-  // that your wifi is connected to.
+  // that your arduino is connected to.
   //println(Serial.list());
   String arduinoPort = Serial.list()[0];
   port = new Serial(this, arduinoPort, 9600); // connect to arduino
