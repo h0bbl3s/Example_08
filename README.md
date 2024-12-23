@@ -18,6 +18,18 @@ A well as the one from the book that goes with the above code:
 
 ![station](book_schematic.png)
 
+---
+
+# Usage notes
+
+You will need to create the font file in Processing:
+
+- copy the font name from the sketch
+- under the "tools" menu click the font tool
+- match a font to the right size and paste the name from the sketch
+- click create
+
+
 # Links
 
 Here are links to the original sources of information:
