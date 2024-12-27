@@ -29,6 +29,10 @@ A well as the one from the book that goes with the above code:
 
 ![station](book_schematic.png)
 
+I decided to make my own version of the book drawing which is here:
+
+![station](example_08_fritzing.png)
+
 ---
 
 # Usage notes
