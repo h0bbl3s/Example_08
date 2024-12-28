@@ -37,7 +37,8 @@ I decided to make my own schematic because the one from the book is a little har
 
 # Usage notes
 
-You will need to create the font file in the  Processing IDE:
+I have included a pre-made font file in the source folder, but feel free to create your own.
+You can create the font file in the Processing IDE:
 
 - copy the font name from the sketch
 - under the "tools" menu click the font tool
