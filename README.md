@@ -40,7 +40,7 @@ I decided to make my own schematic because the one from the book is a little har
 ## Things to note
 
 ***Important:*** In the processing sketch on line 49 you might have to change the number in
-```String arduinoPort = Serial.list()[1];``` to match your port. Most likey ```0``` if not ```1```. You can also 
+```String arduinoPort = Serial.list()[1];``` to match your port. Most likely ```0``` if not ```1```. You can also 
 uncomment line 48 and run the sketch to print a list of available ports.
 
 I have included a pre-made font file in the source folder, but feel free to create your own.
