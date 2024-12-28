@@ -46,20 +46,21 @@ uncomment line 48 and run the sketch to print a list of available ports.
 I have included a pre-made font file in the source folder, but feel free to create your own.
 You can create the font file in the Processing IDE:
 
-- copy the font name from the sketch
-- under the "tools" menu click the font tool
-- match a font to the right size and paste the name from the sketch
-- click create
+- Copy the font name from the sketch
+- Under the "tools" menu click the font tool
+- Match a font to the right size and paste the name from the sketch
+- Click create
 
 ## Running
 
 Once you have tweaked the source files to your desired settings 
 and finished wiring up the circuit:
 
-- Upload ```Example_08B.ino``` to your arduino
 - Connect the arduino
-- Run the ```Example_08A.pde``` in processing
-- Press the button to toggle the leds on and off
+- Upload the ```Example_08B.ino``` sketch to your arduino
+- Close the arduino IDE to free your serial port
+- Run the ```Example_08A.pde``` sketch in processing
+- Press the circuit's button to toggle the leds on and off
 
 You should see a screen like this:
 
