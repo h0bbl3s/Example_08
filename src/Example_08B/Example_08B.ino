@@ -2,7 +2,7 @@
 //
 // Copy and paste this example into an empty Arduino sketch
 
-#define SENSOR 0   
+#define SENSOR A0   
 #define R_LED 9
 #define G_LED 10
 #define B_LED 11
