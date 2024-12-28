@@ -46,7 +46,7 @@ void setup() {
   // the 0 in between [ and ] to the number of the port
   // that your arduino is connected to.
   //println(Serial.list());
-  String arduinoPort = Serial.list()[0];
+  String arduinoPort = Serial.list()[1];
   port = new Serial(this, arduinoPort, 9600); // connect to arduino
 
   lastTime = 0;
