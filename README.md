@@ -1,8 +1,8 @@
 # Example 08 From "Getting Started with Arduino, Second Edition"
 
 Updated and fixed ***Example 08A*** processing sketch from this book. 
-I did ***not*** touch the arduino code as of yet. I may eventually fully 
-test both pieces to ensure they work together, or update them otherwise.
+The arduino code needed slight tweaking as well but I have now fully 
+tested both pieces to ensure they work together.
 
 ## What is this exactly?
 
