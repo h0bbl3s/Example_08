@@ -29,7 +29,7 @@ A well as the one from the book that goes with the above code:
 
 ![station](extras/book_schematic.png)
 
-I decided to make my own version of the book drawing which is here:
+I decided to make my own schematic because the one from the book is a little hard to see in places:
 
 ![station](extras/example_08_fritzing.png)
 
