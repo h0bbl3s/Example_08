@@ -27,15 +27,17 @@ I have located and included the original schematic for reference:
 
 A well as the one from the book that goes with the above code:
 
-![station](extras/book_schematic.png)
+![book](extras/book_schematic.png)
 
 I decided to make my own schematic because the one from the book is a little hard to see in places:
 
-![station](extras/example_08_fritzing.png)
+![fritzing](extras/example_08_fritzing.png)
 
 ---
 
-# Usage notes
+# Usage
+
+## Things to note
 
 ***Important:*** In the processing sketch on line 49 you might have to change the number in
 ```String arduinoPort = Serial.list()[1];``` to match your port. Most likey ```0``` if not ```1```. You can also 
@@ -49,6 +51,33 @@ You can create the font file in the Processing IDE:
 - match a font to the right size and paste the name from the sketch
 - click create
 
+## Running
+
+Once you have tweaked the source files to your desired settings 
+and finished wiring up the circuit:
+
+- Upload ```Example_08B.ino``` to your arduino
+- Connect the arduino
+- Run the ```Example_08A.pde``` in processing
+- Press the button to toggle the leds on and off
+
+You should see a screen like this:
+
+![processing_screenshot](extras/processing_screenshot.png)
+
+Congratulations! You have built an internet connected lamp that will change depending on 
+whatever parameters you specified.
+
+# Final Words
+
+This project is very extensible, and I hope someone gets some use from it. I'm personally 
+thinking I might set this up to monitor HF band conditions for listening to shortwave radio, 
+but the possibilities are endless.
+
+Another thing that I find very nice about the Processing IDE is the ability to export your 
+program with a self contained java/processing environment for different operation systems. 
+Once you have this configured to your liking you can export the entire thing and save a copy
+so that you can run it wherever you want with no need for the IDE.
 
 # Links
 
