@@ -10,12 +10,7 @@ This project originally sets up a lamp that will change colors based on informat
 
 This book version includes a light sensor and a button to start the process as well as the 3 LEDs for red, green, and blue.
 
-This project and original code are over a decade old, and others have had the same issues I did. This led me to create this repository.
-
-## Further
-Another idea is to set up the code to work with the original schematic as well, using commented out alternative sections of code.
-
-I hope this helps others out there who wanted to fully complete this project like I did.
+This project and original code are over a decade old, no longer functional, and others have had the same issues I did. This led me to create this repository.
 
 ---
 
