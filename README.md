@@ -23,15 +23,15 @@ I hope this helps others out there who wanted to fully complete this project lik
 
 I have located and included the original schematic for reference:
 
-![original](rgb_led_schematic.png)
+![original](extras/rgb_led_schematic.png)
 
 A well as the one from the book that goes with the above code:
 
-![station](book_schematic.png)
+![station](extras/book_schematic.png)
 
 I decided to make my own version of the book drawing which is here:
 
-![station](example_08_fritzing.png)
+![station](extras/example_08_fritzing.png)
 
 ---
 
