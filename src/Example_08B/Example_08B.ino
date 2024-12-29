@@ -24,9 +24,9 @@ byte b = 0;
 void setup() {
   Serial.begin(9600);  // open the serial port
   pinMode(BUTTON, INPUT);
-  pinMode(R_LED, OUTPUT);
-  pinMode(G_LED, OUTPUT);
-  pinMode(B_LED, OUTPUT);
+  pinMode(R_LED, OUTPUT); // used for PWM
+  pinMode(G_LED, OUTPUT); // used for PWM
+  pinMode(B_LED, OUTPUT); // used for PWM
 }
 
 void loop() {
