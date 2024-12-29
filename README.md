@@ -1,5 +1,7 @@
 # Example 08 From "Getting Started with Arduino, Second Edition"
 
+![arduino](extras/arduino_logo.png)  ![processinglogo](extras/Processing_logo.png)
+
 Updated and fixed ***Example 08A*** processing sketch from this book. 
 The arduino code needed slight tweaking as well but I have now fully 
 tested both pieces to ensure they work together.
@@ -72,14 +74,20 @@ whatever parameters you specified.
 
 # Final Words
 
-This project is very extensible, and I hope someone gets some use from it. I'm personally 
+This project is very customizable and extendable, and I hope someone gets some use from it. I'm personally 
 thinking I might set this up to monitor HF band conditions for listening to shortwave radio, 
 but the possibilities are endless.
 
 Another thing that I find very nice about the Processing IDE is the ability to export your 
-program with a self contained java/processing environment for different operation systems. 
+program with a self contained java/processing environment for different operating systems. 
 Once you have this configured to your liking you can export the entire thing and save a copy
 so that you can run it wherever you want with no need for the IDE.
+
+Lastly, I wanted to say I am very impressed with the processing.org project, and very sad to 
+see that it has not gotten more attention. The history and how it is intertwined with arduino 
+and wiring is fascinating. This also makes them natural partners. I intend to utilize and 
+further the processing project when and where it makes sense, and I suggest you keep it in mind 
+for your future projects as well!
 
 # Links
 
