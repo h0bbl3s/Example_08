@@ -61,6 +61,10 @@ You should see a screen like this:
 
 ![processing_screenshot](extras/processing_screenshot.png)
 
+or this:
+
+![processing_screenshot2](extras/processing_screenshot2.png)
+
 Congratulations! You have built an internet connected lamp that will change depending on 
 whatever parameters you specified.
 
