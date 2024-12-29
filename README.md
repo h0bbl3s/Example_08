@@ -81,5 +81,6 @@ so that you can run it wherever you want with no need for the IDE.
 
 Here are links to the original sources of information:
 
+- [Processing.org A programming language, graphics library, and IDE](https://processing.org/)
 - [Archive.org Getting Started Arduino Second Edition](https://dn790006.ca.archive.org/0/items/MassimoBanziGettingStartedWithArduinoMake2011/Massimo%20Banzi-Getting%20Started%20with%20Arduino%20-Make%20%282011%29.pdf)
 - [Original blog post](https://todbot.com/blog/2006/10/23/diy-ambient-orb-with-arduino-update/)
