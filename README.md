@@ -1,6 +1,6 @@
 # Example 08 From "Getting Started with Arduino, Second Edition"
 
-![arduino](extras/arduino_logo.png)  ![processinglogo](extras/Processing_logo.png)
+[![arduino](extras/arduino_logo.png)](https://arduino.cc)  ![processinglogo](extras/Processing_logo.png)
 
 Updated and fixed ***Example 08A*** processing sketch from this book. 
 The arduino code needed slight tweaking as well but I have now fully 
