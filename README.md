@@ -64,6 +64,8 @@ You should see a screen like this:
 Congratulations! You have built an internet connected lamp that will change depending on 
 whatever parameters you specified.
 
+![photo](extras/example_08_photo.png)
+
 # Final Words
 
 This project is very extensible, and I hope someone gets some use from it. I'm personally 
