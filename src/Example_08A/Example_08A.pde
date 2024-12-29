@@ -15,8 +15,8 @@ int interval = 10;  // retrieve feed every 10 seconds;
 int lastTime;       // the last time we fetched the content
 
 // set up variables for searched items
-int hack = 0;  // red
-int solar = 0; // green
+int fire = 0;  // red
+int battery = 0; // green
 int wifi = 0;  // blue
 
 int light = 0; // light level measured by the photosensor
@@ -56,7 +56,7 @@ void draw() {
   int n = (interval - ((millis()-lastTime)/1000));
 
   // Build a colour based on the 3 values
-  c = color(hack, solar, wifi);
+  c = color(fire, battery, wifi);
   cs = "#" + hex(c,6); // Prepare a string to be sent to arduino
 
   text("Arduino Networked Lamp", 10,40);
@@ -64,13 +64,13 @@ void draw() {
   text(feed, 10, 140);
 
   text("Next update in "+ n + " seconds",10,450);
-  text("hack" ,10,200); 
-  text(" " + hack, 130, 200);
-  rect(200,172, hack, 28);
+  text("fire" ,10,200); 
+  text(" " + fire, 130, 200);
+  rect(200,172, fire, 28);
 
-  text("solar ",10,240);
-  text(" " + solar, 130, 240);
-  rect(200,212, solar, 28);
+  text("battery ",10,240);
+  text(" " + battery, 130, 240);
+  rect(200,212, battery, 28);
 
   text("wifi ",10,280);
   text(" " + wifi, 130, 280);
@@ -128,8 +128,8 @@ void fetchData() {
   String chunk;
 
   // zero the counters
-  hack   = 0;
-  solar    = 0;
+  fire   = 0;
+  battery    = 0;
   wifi = 0;
   try {
     URL url = new URL(feed);  // An object to represent the URL
@@ -152,22 +152,22 @@ void fetchData() {
         // each chunk of data is made lowercase
         chunk= st.nextToken().toLowerCase() ;
 
-        if (chunk.indexOf("hack") >= 0)   // found "hack"?
-          hack++;   // increment hack by 1
-        if (chunk.indexOf("solar") >= 0 ) // found "solar"?
-          solar++;  // increment power by 1
+        if (chunk.indexOf("fire") >= 0)   // found "fire"?
+          fire++;   // increment fire by 1
+        if (chunk.indexOf("battery") >= 0 ) // found "battery"?
+          battery++;  // increment power by 1
         if (chunk.indexOf("wifi") >= 0) // found "wifi"?
           wifi++;  // increment wifi by 1
       }
     }
 
     // Set 64 to be the maximum number of references we care about.
-    if (hack > 64) hack = 64;
-    if (solar > 64) solar = 64;
+    if (fire > 64) fire = 64;
+    if (battery > 64) battery = 64;
     if (wifi > 64) wifi = 64;
 
-    hack = hack * 4;    // multiply by 4 so that the max is 255,
-    solar = solar * 4;  // which comes in handy when building a
+    fire = fire * 4;    // multiply by 4 so that the max is 255,
+    battery = battery * 4;  // which comes in handy when building a
     wifi = wifi * 4;    // colour that is made of 4 bytes (ARGB)
   } 
   catch (Exception ex) { // If there was an error, stop the sketch
