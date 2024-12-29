@@ -4,28 +4,26 @@
 //
 // This code has been reworked by h0bbl3s (h0bbl3s@yahoo.com)
 // to work with more recent versions of Processing
-//
-// Copy and paste this example into an empty Processing sketch
 
 import processing.serial.*;
 import java.net.*;
 import java.io.InputStreamReader;
 import java.util.*;
 
-String feed = "https://hackaday.com/blog/feed/"; // this seemed an appropriate replacement for makezine, feel free to change
-
-int interval = 10;  // retrieve feed every 60 seconds;
+String feed = "https://hackaday.com/blog/feed/";  // change the feed to whatever you like
+int interval = 10;  // retrieve feed every 10 seconds;
 int lastTime;       // the last time we fetched the content
 
-int power    = 0; // I tried to choose terms that would come up frequently but not too much
-int exploit   = 0;
-int wifi = 0;
+// set up variables for searched items
+int hack = 0;  // red
+int solar = 0; // green
+int wifi = 0;  // blue
 
-int light = 0;  // light level measured by the lamp
+int light = 0; // light level measured by the photosensor
 
 Serial port;
-color c;
-String cs;
+color c;  // variable for color to send
+String cs; // variable for color with `#` prepended
 
 String buffer = ""; // Accumulates characters coming from arduino
 
@@ -58,7 +56,7 @@ void draw() {
   int n = (interval - ((millis()-lastTime)/1000));
 
   // Build a colour based on the 3 values
-  c = color(exploit, power, wifi);
+  c = color(hack, solar, wifi);
   cs = "#" + hex(c,6); // Prepare a string to be sent to arduino
 
   text("Arduino Networked Lamp", 10,40);
@@ -66,13 +64,13 @@ void draw() {
   text(feed, 10, 140);
 
   text("Next update in "+ n + " seconds",10,450);
-  text("exploit" ,10,200); 
-  text(" " + exploit, 130, 200);
-  rect(200,172, exploit, 28);
+  text("hack" ,10,200); 
+  text(" " + hack, 130, 200);
+  rect(200,172, hack, 28);
 
-  text("power ",10,240);
-  text(" " + power, 130, 240);
-  rect(200,212, power, 28);
+  text("solar ",10,240);
+  text(" " + solar, 130, 240);
+  rect(200,212, solar, 28);
 
   text("wifi ",10,280);
   text(" " + wifi, 130, 280);
@@ -130,8 +128,8 @@ void fetchData() {
   String chunk;
 
   // zero the counters
-  power    = 0;
-  exploit   = 0;
+  hack   = 0;
+  solar    = 0;
   wifi = 0;
   try {
     URL url = new URL(feed);  // An object to represent the URL
@@ -154,23 +152,23 @@ void fetchData() {
         // each chunk of data is made lowercase
         chunk= st.nextToken().toLowerCase() ;
 
-        if (chunk.indexOf("power") >= 0 ) // found "power"?
-          power++;    // increment power by 1
-        if (chunk.indexOf("exploit") >= 0)   // found "exploit"?
-          exploit++;   // increment exploit by 1
+        if (chunk.indexOf("hack") >= 0)   // found "hack"?
+          hack++;   // increment hack by 1
+        if (chunk.indexOf("solar") >= 0 ) // found "solar"?
+          solar++;  // increment power by 1
         if (chunk.indexOf("wifi") >= 0) // found "wifi"?
-          wifi++; // increment wifi by 1
+          wifi++;  // increment wifi by 1
       }
     }
 
     // Set 64 to be the maximum number of references we care about.
-    if (exploit > 64)   exploit = 64;
-    if (power > 64)    power = 64;
+    if (hack > 64) hack = 64;
+    if (solar > 64) solar = 64;
     if (wifi > 64) wifi = 64;
 
-    exploit = exploit * 4;     // multiply by 4 so that the max is 255,
-    power = power * 4;       // which comes in handy when building a
-    wifi = wifi * 4; // colour that is made of 4 bytes (ARGB)
+    hack = hack * 4;    // multiply by 4 so that the max is 255,
+    solar = solar * 4;  // which comes in handy when building a
+    wifi = wifi * 4;    // colour that is made of 4 bytes (ARGB)
   } 
   catch (Exception ex) { // If there was an error, stop the sketch
     ex.printStackTrace();
