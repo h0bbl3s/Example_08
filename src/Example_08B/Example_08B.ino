@@ -1,6 +1,4 @@
 // Example 08B: Arduino Networked Lamp
-//
-// Copy and paste this example into an empty Arduino sketch
 
 #define SENSOR A0
 #define R_LED 9
@@ -68,9 +66,9 @@ void loop() {
 
   if (state == 1) {  // if the lamp is on
 
-    analogWrite(R_LED, r);
-    analogWrite(G_LED, g);
-    analogWrite(B_LED, b);
+    analogWrite(R_LED, r);  // write the values
+    analogWrite(G_LED, g);  // to the leds
+    analogWrite(B_LED, b);  // to turn them on
   } else {
 
     analogWrite(R_LED, 0);  // otherwise turn off
