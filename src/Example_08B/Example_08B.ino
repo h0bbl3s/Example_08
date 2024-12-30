@@ -68,10 +68,6 @@ void loop() {
   old_btn = btn; // val is now old, let's store it
 
   if (state == 1) { // if the lamp is on
-    if (r == 0) { // we have to set the leds to at least 1 to prevent flashing
-      r = 1;
-    }
-    if (g)
 
     analogWrite(R_LED, r);  // turn the leds on
     analogWrite(G_LED, g);  // at the colour
